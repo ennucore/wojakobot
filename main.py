@@ -328,8 +328,8 @@ async def add_watermark(image_url: str) -> Optional[BufferedInputFile]:
         # Watermark parameters
         watermark_text = "@wojakobot"
         
-        # Font size depends on image size (make it large but 2x smaller than before)
-        font_size = max(60, min(image.width, image.height) // 10)
+        # Font size depends on image size (make it prominent but not overwhelming)
+        font_size = max(80, min(image.width, image.height) // 8)
         
         # Try to load system font or use built-in
         try:
